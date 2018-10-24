@@ -21,6 +21,31 @@ public class User {
         return true;
     }
 
+    public static String createUsersTableSQL(){
+        return ("CREATE TABLE IF NOT EXISTS tbl_users (\n"
+                + " username text NOT NULL,\n"
+                + " pwd text NOT NULL,\n"
+                + " birthday text,\n"
+                + "	privateName text,\n"
+                + "	lastName text,\n"
+                + "	city text\n"
+                + ");");
+    }
+
+    public static String dropUsersTableSQL(){
+        return "DROP TABLE IF EXISTS tbl_users;";
+    }
+
+    public String getUserFieldsSQL(){
+        return "VALUES (" + username +
+                ", " + pwd +
+                ", " + birthday +
+                ", " + privateName +
+                ", " + lastName +
+                ", " + city +
+                ");";
+    }
+
     public User(String username, String pwd, Date birthday, String privateName, String lastName, String city) {
         this.username = username;
         this.pwd = pwd;
