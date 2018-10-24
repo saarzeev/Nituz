@@ -30,7 +30,7 @@ public class MyMain {
     public static void main(String[] args) {
         createNewDatabase("test.db");
         addTableToDB(User.createUsersTableSQL());
-        User myUser = new User("saarzeev", "hbjhb", new Date(1990, 5, 2), "Saar", "Guttman", "Nesher");
+        User myUser = new User("myNameHere", "hbjhb", new Date(1990, 5, 2), "Yofi", "Tofi", "Nesher");
         addUserToDB(myUser);
         selectFromDB();
         
